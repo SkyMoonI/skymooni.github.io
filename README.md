@@ -1,1 +1,0 @@
-# gokayiseri.github.io
