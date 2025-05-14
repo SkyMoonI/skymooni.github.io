@@ -1,0 +1,27 @@
+.contact-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 50px;
+}
+
+.contact-me-background {
+  background-color: #e3fdf1;
+}
+
+.contact-me img {
+  height: 50px;
+  width: 55px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.contact-me-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
