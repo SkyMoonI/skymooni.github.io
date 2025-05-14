@@ -1,0 +1,36 @@
+.about-me {
+  text-align: center;
+}
+.about-me-background {
+  background-color: #e7e3fd;
+}
+.profile-image {
+  width: 200px;
+  border-radius: 50%;
+  margin-bottom: 50px;
+}
+.paragraph {
+  text-align: left;
+}
+.paragraph h2 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.paragraph p {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1200px) {
+  .about-me {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+  .profile-image {
+    order: 1;
+    width: 300px;
+    margin-bottom: 0px;
+  }
+}
