@@ -3,7 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles/general.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+
+    <title>Gokay Iseri &mdash; Portfolio</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <a class="logo" href="#">Gokay Iseri</a>
+
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#about-me">About</a></li>
+          <li><a class="main-nav-link" href="#projects">Projects</a></li>
+          <li><a class="main-nav-link" href="#experiences">Experiences</a></li>
+          <li><a class="main-nav-link" href="#contact-me">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <main>
+      <section class="section-hero" id="hero">
+        <div class="hero-content">
+          <div class="hero-text-container">
+            <h1 class="primary-heading">Full-Stack Developer</h1>
+            <h2 class="secondary-heading">Full-Stack Developer</h2>
+            <div class="hero-btn-container">
+              <a class="btn" href="#projects">See Projects</a>
+              <a class="btn" href="#contact-me">Get In Touch</a>
+            </div>
+          </div>
+          <div class="hero-img-container">
+            <img class="hero-img" src="" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="section-about-me" id="about-me"></section>
+      <section class="section-projects" id="projects"></section>
+      <section class="section-experiences" id="experiences"></section>
+      <section class="section-contact-me" id="contact-me"></section>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script src="./scripts/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>

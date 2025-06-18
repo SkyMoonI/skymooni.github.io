@@ -1,0 +1,160 @@
+/* ***************************** */
+/* HEADER */
+/* ***************************** */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  height: 7.4rem;
+  padding: 0 2.4rem;
+}
+
+.header .logo:link,
+.header .logo:visited {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #555;
+}
+
+.header .logo:hover,
+.header .logo:active {
+}
+
+/* ***************************** */
+/* NAVIGATION */
+/* ***************************** */
+.main-nav {
+  background-color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(3px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%);
+
+  /* Hide navigation */
+
+  /* 1) Hide it visually */
+  opacity: 0;
+
+  /* 2) Make it unaccessible to mouse and keyboard */
+  pointer-events: none;
+
+  /* 3) Hide it from screen readers */
+  visibility: hidden;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.4rem;
+  gap: 2.4rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  text-decoration: none;
+  color: #555;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+}
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.icon-mobile-nav {
+  height: 3.2rem;
+  width: 3.2rem;
+  color: #555;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+.nav-active .main-nav {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.nav-active .icon-mobile-nav[name="close-outline"] {
+  display: block;
+}
+
+.nav-active .icon-mobile-nav[name="menu-outline"] {
+  display: none;
+}
+/* ***************************** */
+/* HERO SECTION */
+/* ***************************** */
+.section-hero {
+  padding: 3rem 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  padding: 0 2.4rem;
+}
+
+.hero-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.hero-btn-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.hero-img-container {
+  width: 100%;
+}
+
+.hero-img {
+  height: 20rem;
+  width: 100%;
+  background-color: #555;
+  object-fit: cover;
+  object-position: center;
+}
+/* ***************************** */
+/* ABOUT ME SECTION */
+/* ***************************** */
+
+/* ***************************** */
+/* PROJECTS SECTION */
+/* ***************************** */
+
+/* ***************************** */
+/* EXPERIENCES SECTION */
+/* ***************************** */
+
+/* ***************************** */
+/* CONTACT ME SECTION */
+/* ***************************** */
+
+/* ***************************** */
+/* FOOTER */
+/* ***************************** */
