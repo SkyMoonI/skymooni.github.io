@@ -7,19 +7,17 @@
   justify-content: space-between;
   position: relative;
 
+  background-color: #fdf2e9;
+
   height: 7.4rem;
   padding: 0 2.4rem;
 }
 
-.header .logo:link,
-.header .logo:visited {
+.logo:link,
+.logo:visited {
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: #555;
-}
-
-.header .logo:hover,
-.header .logo:active {
 }
 
 /* ***************************** */
@@ -64,12 +62,29 @@
 
 .main-nav-link:link,
 .main-nav-link:visited {
+  display: inline-block;
   text-decoration: none;
-  color: #555;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
 }
-
 .main-nav-link:hover,
 .main-nav-link:active {
+  color: #cf711f;
+}
+
+.main-nav-link.nav-cm:link,
+.main-nav-link.nav-cm:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: #e67e22;
+}
+
+.main-nav-link.nav-cm:hover,
+.main-nav-link.nav-cm:active {
+  background-color: #cf711f;
 }
 
 .btn-mobile-nav {
@@ -106,26 +121,36 @@
 /* HERO SECTION */
 /* ***************************** */
 .section-hero {
-  padding: 3rem 0;
+  padding: 1.6rem 0 4.4rem 0;
+  background-color: #fdf2e9;
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.4rem;
+  gap: 4.4rem;
   padding: 0 2.4rem;
 }
 
 .hero-text-container {
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  align-items: center;
+}
+
+.hero-description {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 4.4rem;
+  color: #555;
+  line-height: 1.6;
 }
 
 .hero-btn-container {
   display: flex;
   justify-content: space-around;
+  width: 100%;
 }
 
 .hero-img-container {
@@ -143,6 +168,44 @@
 /* ABOUT ME SECTION */
 /* ***************************** */
 
+.section-about-me {
+  padding: 4.4rem 0;
+}
+
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.4rem;
+  padding: 0 2.4rem;
+}
+
+.about-me-img-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-me-img {
+  height: 20rem;
+  width: 20rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.about-me-text-container {
+}
+
+.about-me-description {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  font-size: 1.6rem;
+  line-height: 1.8;
+}
+
 /* ***************************** */
 /* PROJECTS SECTION */
 /* ***************************** */
@@ -158,3 +221,48 @@
 /* ***************************** */
 /* FOOTER */
 /* ***************************** */
+
+footer {
+  background-color: #fae5d3;
+  padding: 4.4rem 3rem;
+  text-align: center;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.copyright {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #767676;
+  text-align: start;
+}
+
+.contact-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 2.4rem;
+}
+
+.social-icons-col {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-info-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.footer-icon {
+  height: 2.4rem;
+}

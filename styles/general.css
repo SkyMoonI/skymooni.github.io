@@ -17,29 +17,39 @@ Medium: 1.2
 Paragraph default: 1.6
 Large: 1.8
 
-Letter spacing
+Letter spacing:
+-0.5px
+0.75px
 
 --- 02 COLORS
 
-- Primary: 
-
-- Tints: 
+- Primary: #e67e22
+- Tints:
+#fdf2e9
+#fae5d3
+#eb984e
 
 - Shades: 
+#cf711f
+#45260a
 
 - Accents:
+- Greys
 
-- Greys:
-#777
+#888
+#767676 (lightest grey allowed on #fff)
+#6f6f6f (lightest grey allowed on #fdf2e9)
 #555
 #333
 
 --- 05 SHADOWS
 
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
 --- 06 BORDER-RADIUS
 
-Default: 
-
+Default: 9px
+Medium: 11px
 
 --- 07 WHITESPACE
 
@@ -79,20 +89,60 @@ body {
 /* ***************************** */
 /* GENERAL REUSABLE COMPONENTS */
 /* ***************************** */
-.primary-heading {
-  font-size: 3.6rem;
+.grid {
+  display: grid;
+  column-gap: 2.4rem;
+  row-gap: 4.4rem;
 }
 
-.secondary-heading {
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+.heading-primary {
+  font-size: 4.4rem;
+  line-height: 1.05;
+  margin-bottom: 2.4rem;
+}
+
+.heading-secondary {
   font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 2.4rem;
 }
 
-.tertiary-heading {
-  font-size: 2.4rem;
+.heading-tertiary {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
 }
 
 .subheading {
-  font-size: 2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
 }
 
 .btn,
@@ -100,9 +150,11 @@ body {
 .btn:visited {
   display: inline-block;
   text-decoration: none;
-  color: #555;
 
-  padding: 1.6rem 3.2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  padding: 1.2rem 2.4rem;
   border-radius: 9px;
 
   border: none;
@@ -115,6 +167,30 @@ body {
 .btn:active {
 }
 
+.btn--full:link,
+.btn--full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: #cf711f;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #fff;
+  color: #555;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #fdf2e9;
+
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
 /* ***************************** */
 /* HELPER/SETTINGS CLASSES */
 /* ***************************** */
@@ -124,4 +200,8 @@ body {
 
 .center-text {
   text-align: center;
+}
+
+.grid-center-v {
+  align-items: center;
 }

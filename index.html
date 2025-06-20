@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./styles/general.css" />
     <link rel="stylesheet" href="./styles/main.css" />
 
@@ -16,9 +22,12 @@
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li><a class="main-nav-link" href="#about-me">About</a></li>
+          <li><a class="main-nav-link" href="#skills">Skills</a></li>
           <li><a class="main-nav-link" href="#projects">Projects</a></li>
           <li><a class="main-nav-link" href="#experiences">Experiences</a></li>
-          <li><a class="main-nav-link" href="#contact-me">Contact</a></li>
+          <li>
+            <a class="main-nav-link nav-cm" href="#contact-me">Contact Me</a>
+          </li>
         </ul>
       </nav>
 
@@ -32,11 +41,14 @@
       <section class="section-hero" id="hero">
         <div class="hero-content">
           <div class="hero-text-container">
-            <h1 class="primary-heading">Full-Stack Developer</h1>
-            <h2 class="secondary-heading">Full-Stack Developer</h2>
+            <h1 class="heading-primary">Full-Stack Developer</h1>
+            <p class="hero-description">
+              "Passionate about continuous learning and building better web
+              experiences"
+            </p>
             <div class="hero-btn-container">
-              <a class="btn" href="#projects">See Projects</a>
-              <a class="btn" href="#contact-me">Get In Touch</a>
+              <a class="btn btn--full" href="#projects">See Projects</a>
+              <a class="btn btn--outline" href="#contact-me">Get In Touch</a>
             </div>
           </div>
           <div class="hero-img-container">
@@ -44,13 +56,88 @@
           </div>
         </div>
       </section>
-      <section class="section-about-me" id="about-me"></section>
+      <section class="section-about-me" id="about-me">
+        <div class="about-me-container">
+          <div class="about-me-img-container">
+            <img
+              class="about-me-img"
+              src="./images/GokayIseri.jpg"
+              alt="Photo of Gokay"
+            />
+          </div>
+          <div class="about-me-text-container">
+            <h2 class="heading-secondary">About Me</h2>
+            <div class="about-me-description">
+              <p>
+                I'm a passionate developer with a background in Computer
+                Engineering from Sakarya University. During my university years,
+                I explored various areas of software development, with a strong
+                focus on game development, alongside mobile, web development and
+                machine learning projects. I also spent time learning 3D
+                modeling in Blender to support my game design efforts.
+              </p>
+              <p>
+                After graduation, I continued to pursue game development,
+                working on personal projects and deepening my skills. However,
+                challenges in finding industry opportunities led me to shift my
+                focus toward software engineering, starting with web
+                development.
+              </p>
+              <p>
+                Currently, I'm expanding my skills further by following Web
+                Development courses, building a solid foundation in full-stack
+                web technologies and modern development practices.
+              </p>
+              <p>
+                I enjoy combining creativity with technical skills—whether in
+                games, interactive websites, or software tools—and I’m always
+                looking forward to learning and growing as a developer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-skills" id="skills"></section>
       <section class="section-projects" id="projects"></section>
       <section class="section-experiences" id="experiences"></section>
       <section class="section-contact-me" id="contact-me"></section>
     </main>
 
-    <footer id="footer"></footer>
+    <footer id="footer">
+      <div class="footer-container grid grid--2-cols">
+        <div class="logo-col">
+          <a class="logo" href="#">Gokay Iseri</a>
+
+          <p class="copyright">
+            Copyright &copy; <span class="year">2027</span> by Gokay Iseri. All
+            rights reserved.
+          </p>
+        </div>
+
+        <div class="contact-col">
+          <div class="social-icons-col">
+            <a href="https://github.com/SkyMoonI" target="_blank"
+              ><img class="footer-icon" src="./images/GitHub-Logo.png" alt=""
+            /></a>
+            <a
+              href="https://www.linkedin.com/in/gökay-işeri-601298215/"
+              target="_blank"
+              ><img class="footer-icon" src="./images/LinkedIn-logo.png" alt=""
+            /></a>
+            <a href="mailto:gokay.iseri@outlook.com"
+              ><img
+                class="footer-icon"
+                src="./images/Microsoft_Outlook_new_logo.png"
+                alt=""
+            /></a>
+          </div>
+          <div class="contact-info-col">
+            <p>+90 537-509-2804</p>
+            <p>gokay.iseri@outlook.com</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="./scripts/script.js"></script>
     <script
