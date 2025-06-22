@@ -1,0 +1,21 @@
+/* ***************************** */
+/* HEADER */
+/* ***************************** */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  background-color: #fdf2e9;
+
+  height: 7.4rem;
+  padding: 0 2.4rem;
+}
+
+.logo:link,
+.logo:visited {
+  text-decoration: none;
+  font-size: 2.4rem;
+  color: #555;
+}

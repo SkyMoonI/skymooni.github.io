@@ -1,0 +1,41 @@
+/* ***************************** */
+/* ABOUT ME SECTION */
+/* ***************************** */
+
+.section-about-me {
+  padding: 8rem 0;
+}
+
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.4rem;
+  padding: 0 3rem;
+}
+
+.about-me-img-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-me-img {
+  height: 20rem;
+  width: 20rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.about-me-text-container {
+}
+
+.about-me-description {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  font-size: 1.6rem;
+  line-height: 1.8;
+}

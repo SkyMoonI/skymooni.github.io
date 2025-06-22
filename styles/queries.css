@@ -1,0 +1,260 @@
+/* @media (max-width: 768px) {
+  .tab-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tab-button {
+    width: 100%;
+    max-width: 300px;
+    margin: 5px 0;
+    border-radius: 10px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    margin: 10px;
+    border-radius: 10px;
+  }
+
+  .header h1 {
+    font-size: 2em;
+  }
+} */
+/* Tablet and Desktop styles - 768px and up */
+@media (min-width: 768px) {
+  .section-experiences {
+    padding: 4rem 0 8rem;
+  }
+
+  .experiences-header {
+    padding: 5rem 3rem;
+  }
+
+  .experiences-description {
+    font-size: 1.6rem;
+  }
+
+  .timeline-container {
+    padding: 0 2rem;
+  }
+
+  .timeline {
+    max-width: 80rem;
+    gap: 4rem;
+  }
+
+  /* Center line for desktop */
+  .timeline::before {
+    left: 50%;
+  }
+
+  .timeline-item {
+    width: 50%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Odd items (1st, 3rd, 5th) - left side */
+  .timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: 4rem;
+    text-align: right;
+  }
+
+  /* Even items (2nd, 4th, 6th) - right side */
+  .timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 4rem;
+    text-align: left;
+  }
+
+  .timeline-content {
+    padding: 2.5rem;
+  }
+
+  /* Arrows for desktop */
+  .timeline-content::before {
+    top: 2.5rem;
+    border: 1.5rem solid transparent;
+  }
+
+  /* Left side items - arrow points right */
+  .timeline-item:nth-child(odd) .timeline-content::before {
+    right: -3rem;
+    left: auto;
+    border-left-color: #fff;
+    border-right: none;
+  }
+
+  /* Right side items - arrow points left */
+  .timeline-item:nth-child(even) .timeline-content::before {
+    left: -3rem;
+    right: auto;
+    border-right-color: #fff;
+    border-left: none;
+  }
+
+  /* Markers positioned on center line */
+  .timeline-marker {
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 2.5rem;
+    left: auto;
+    right: auto;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-marker {
+    right: -1.25rem;
+  }
+
+  .timeline-item:nth-child(even) .timeline-marker {
+    left: -1.25rem;
+  }
+
+  /* Alignment for left side items */
+  .timeline-item:nth-child(odd) .date-location,
+  .timeline-item:nth-child(odd) .skills {
+    justify-content: flex-end;
+  }
+
+  .date-location {
+    gap: 1.5rem;
+  }
+
+  .skills {
+    gap: 0.8rem;
+  }
+
+  .company-name {
+    font-size: 1.4rem;
+  }
+
+  .position {
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .skill-tag {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  .contact-section {
+    padding: 6rem 2rem;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-text {
+    padding: 4rem 3rem;
+  }
+
+  .contact-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .contact-form {
+    padding: 4rem 3rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .contact-section {
+    padding: 8rem 2rem;
+  }
+
+  .contact-text h2 {
+    font-size: 3rem;
+  }
+
+  .contact-text p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Animation for form validation */
+.form-group.error input,
+.form-group.error textarea {
+  border-color: #e74c3c;
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  footer {
+    padding: 5rem 2rem 2rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    text-align: left;
+  }
+
+  .footer-brand {
+    text-align: left;
+  }
+
+  .footer-contact {
+    text-align: left;
+  }
+
+  .contact-item {
+    justify-content: flex-start;
+  }
+
+  .social-links {
+    justify-content: flex-start;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  footer {
+    padding: 6rem 2rem 2rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 2fr 1fr;
+    gap: 6rem;
+  }
+
+  .logo {
+    font-size: 2.5rem;
+  }
+
+  .footer-tagline {
+    font-size: 1.2rem;
+    max-width: 400px;
+  }
+}

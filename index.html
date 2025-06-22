@@ -12,6 +12,16 @@
 
     <link rel="stylesheet" href="./styles/general.css" />
     <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/hero.css" />
+    <link rel="stylesheet" href="./styles/about-me.css" />
+    <link rel="stylesheet" href="./styles/skills.css" />
+    <link rel="stylesheet" href="./styles/projects.css" />
+    <link rel="stylesheet" href="./styles/experiences.css" />
+    <link rel="stylesheet" href="./styles/contact-me.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/queries.css" />
 
     <title>Gokay Iseri &mdash; Portfolio</title>
   </head>
@@ -97,44 +107,766 @@
           </div>
         </div>
       </section>
-      <section class="section-skills" id="skills"></section>
-      <section class="section-projects" id="projects"></section>
-      <section class="section-experiences" id="experiences"></section>
-      <section class="section-contact-me" id="contact-me"></section>
-    </main>
+      <section class="section-skills" id="skills">
+        <h2 class="heading-secondary skills-header">Skills</h2>
+        <div class="skills-container">
+          <div class="skill">
+            <h3 class="heading-tertiary center-text">Web Development</h3>
+            <ul class="skill-list grid grid--3-cols">
+              <li class="skill-item">
+                <img
+                  class="skill-item-logo"
+                  src="./images/html-logo.png"
+                  alt="html-logo"
+                />
+                <p class="skill-item-name">HTML</p>
+              </li>
+              <li class="skill-item">
+                <img
+                  class="skill-item-logo"
+                  src="./images/css-logo.png"
+                  alt="css-logo"
+                />
+                <p class="skill-item-name">CSS</p>
+              </li>
+              <li class="skill-item">
+                <img
+                  class="skill-item-logo"
+                  src="./images/JavaScript-Logo.png"
+                  alt="js-logo"
+                />
+                <p class="skill-item-name">JavaScript</p>
+              </li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h3 class="heading-tertiary center-text">Game Development</h3>
+            <ul class="skill-list grid grid--3-cols">
+              <li class="skill-item">
+                <img
+                  class="skill-item-logo"
+                  src="./images/unity-logo.png"
+                  alt="unity-logo"
+                />
+                <p class="skill-item-name">Unity</p>
+              </li>
+              <li class="skill-item">
+                <img
+                  class="skill-item-logo"
+                  src="./images/Csharp-logo.png"
+                  alt="csharp-logo"
+                />
+                <p class="skill-item-name">C#</p>
+              </li>
 
-    <footer id="footer">
-      <div class="footer-container grid grid--2-cols">
-        <div class="logo-col">
-          <a class="logo" href="#">Gokay Iseri</a>
+              <li class="skill-item">
+                <img
+                  class="skill-item-logo"
+                  src="./images/blender-logo.png"
+                  alt="blender-logo"
+                />
+                <p class="skill-item-name">Blender</p>
+              </li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h3 class="heading-tertiary center-text">Other</h3>
+            <ul class="skill-list grid grid--6-cols">
+              <li class="skill-item grid--col-span-2">
+                <img
+                  class="skill-item-logo"
+                  src="./images/git-logo.png"
+                  alt="git-logo"
+                />
+                <p class="skill-item-name">Git</p>
+              </li>
+              <li class="skill-item grid--col-span-2">
+                <img
+                  class="skill-item-logo"
+                  src="./images/github-logo.png"
+                  alt="github-logo"
+                />
+                <p class="skill-item-name">GitHub</p>
+              </li>
+              <li class="skill-item grid--col-span-2">
+                <img
+                  class="skill-item-logo"
+                  src="./images/oop-logo.png"
+                  alt="oop-logo"
+                />
+                <p class="skill-item-name">OOP</p>
+              </li>
 
-          <p class="copyright">
-            Copyright &copy; <span class="year">2027</span> by Gokay Iseri. All
-            rights reserved.
+              <li class="skill-item grid--col-span-2 grid--col-6-center">
+                <img
+                  class="skill-item-logo"
+                  src="./images/solid-logo.png"
+                  alt="solid-logo"
+                />
+                <p class="skill-item-name">SOLID Principles</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section-projects" id="projects">
+        <div class="projects-header">
+          <h2 class="heading-secondary">My Project Portfolio</h2>
+          <p class="portfolio-description">
+            Explore some of my work across web development, game development,
+            and 3D modeling
           </p>
         </div>
 
-        <div class="contact-col">
-          <div class="social-icons-col">
-            <a href="https://github.com/SkyMoonI" target="_blank"
-              ><img class="footer-icon" src="./images/GitHub-Logo.png" alt=""
-            /></a>
-            <a
-              href="https://www.linkedin.com/in/gökay-işeri-601298215/"
-              target="_blank"
-              ><img class="footer-icon" src="./images/LinkedIn-logo.png" alt=""
-            /></a>
-            <a href="mailto:gokay.iseri@outlook.com"
-              ><img
-                class="footer-icon"
-                src="./images/Microsoft_Outlook_new_logo.png"
-                alt=""
-            /></a>
+        <div class="tab-container">
+          <div class="tab-buttons">
+            <button class="tab-button active" onclick="showTab('recent')">
+              <span class="icon">🌐</span>
+              <p>Recent Projects</p>
+            </button>
+            <button class="tab-button" onclick="showTab('games')">
+              <span class="icon">🎮</span>
+              <p>Game Projects</p>
+            </button>
+            <button class="tab-button" onclick="showTab('blender')">
+              <span class="icon">🎨</span>
+              <p>Blender Projects</p>
+            </button>
           </div>
-          <div class="contact-info-col">
-            <p>+90 537-509-2804</p>
-            <p>gokay.iseri@outlook.com</p>
+        </div>
+
+        <div id="recent" class="tab-content active recent-projects">
+          <h3 class="heading-tertiary">Recent Web Development Projects</h3>
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-title">
+                <span class="icon">🆕</span>
+                <p>New Website Project</p>
+              </div>
+              <div class="project-description">
+                Latest web development project showcasing modern design
+                principles and cutting-edge technologies.
+              </div>
+              <div class="project-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Responsive</span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-title">
+                <span class="icon">🍽️</span>
+                Omnifood Project
+              </div>
+              <div class="project-description">
+                Food delivery website featuring elegant design, smooth
+                animations, and user-friendly interface.
+              </div>
+              <div class="project-tags">
+                <span class="tag">Landing Page</span>
+                <span class="tag">CSS Grid</span>
+                <span class="tag">Flexbox</span>
+                <span class="tag">Animations</span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-title">
+                <span class="icon">📚</span>
+                Old Website Project
+              </div>
+              <div class="project-description">
+                Earlier web development work demonstrating growth and evolution
+                in coding skills and design approach.
+              </div>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Foundation</span>
+                <span class="tag">Learning</span>
+              </div>
+            </div>
           </div>
+        </div>
+
+        <div id="games" class="tab-content game-projects">
+          <h3 class="heading-tertiary">Game Development Projects</h3>
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-title">
+                <span class="icon">🏰</span>
+                Tile Vania
+              </div>
+              <div class="project-description">
+                2D platformer game with tile-based level design and classic
+                gameplay mechanics.
+              </div>
+              <div class="project-tags">
+                <span class="tag">Unity</span>
+                <span class="tag">2D Platformer</span>
+                <span class="tag">C#</span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-title">
+                <span class="icon">⚔️</span>
+                Endless War
+              </div>
+              <div class="project-description">
+                Mobile RPG game where players control a character to battle
+                skeletons, gain experience, and upgrade stats. Original
+                creation.
+              </div>
+              <div class="project-tags">
+                <span class="tag">Mobile Game</span>
+                <span class="tag">RPG</span>
+                <span class="tag">Original</span>
+                <span class="tag">Character Progression</span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-title">
+                <span class="icon">👾</span>
+                Kawaii Survivor
+              </div>
+              <div class="project-description">
+                Cute survival game developed following a comprehensive game
+                development course.
+              </div>
+              <div class="project-tags">
+                <span class="tag">Survival</span>
+                <span class="tag">Course Project</span>
+                <span class="tag">Kawaii Style</span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-title">
+                <span class="icon">🚗</span>
+                Tank Game
+              </div>
+              <div class="project-description">
+                Web-based tank combat game demonstrating JavaScript game
+                development and web programming skills.
+              </div>
+              <div class="project-tags">
+                <span class="tag">Web Game</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">HTML5 Canvas</span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-title">
+                <span class="icon">🔥</span>
+                Heat Rush
+              </div>
+              <div class="project-description">
+                Fast-paced game created during a game jam, showcasing ability to
+                work under pressure and tight deadlines.
+              </div>
+              <div class="project-tags">
+                <span class="tag">Game Jam</span>
+                <span class="tag">Time Pressure</span>
+                <span class="tag">Fast Development</span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-title">
+                <span class="icon">🐦</span>
+                Flappy Bird
+              </div>
+              <div class="project-description">
+                Recreation of the classic Flappy Bird game, demonstrating
+                understanding of game physics and mechanics.
+              </div>
+              <div class="project-tags">
+                <span class="tag">Classic Recreation</span>
+                <span class="tag">Physics</span>
+                <span class="tag">Game Fundamentals</span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-title">
+                <span class="icon">🧠</span>
+                Quiz Master
+              </div>
+              <div class="project-description">
+                Interactive quiz application with engaging user interface and
+                educational gameplay elements.
+              </div>
+              <div class="project-tags">
+                <span class="tag">Interactive</span>
+                <span class="tag">Educational</span>
+                <span class="tag">UI/UX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="blender" class="tab-content blender-projects">
+          <h3 class="heading-tertiary">3D Modeling & Animation Projects</h3>
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-title">
+                <span class="icon">✈️</span>
+                Blender Plane
+              </div>
+              <div class="project-description">
+                Detailed 3D aircraft model showcasing modeling techniques and
+                attention to mechanical details.
+              </div>
+              <div class="project-tags">
+                <span class="tag">3D Modeling</span>
+                <span class="tag">Vehicle</span>
+                <span class="tag">Technical</span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-title">
+                <span class="icon">🍩</span>
+                Blender Donut
+              </div>
+              <div class="project-description">
+                Classic beginner project featuring realistic donut with icing,
+                demonstrating fundamental Blender skills.
+              </div>
+              <div class="project-tags">
+                <span class="tag">Beginner Project</span>
+                <span class="tag">Texturing</span>
+                <span class="tag">Materials</span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-title">
+                <span class="icon">🏘️</span>
+                Blender Village
+              </div>
+              <div class="project-description">
+                Complete village scene with multiple buildings, landscaping, and
+                environmental storytelling.
+              </div>
+              <div class="project-tags">
+                <span class="tag">Environment</span>
+                <span class="tag">Scene Composition</span>
+                <span class="tag">Landscape</span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-title">
+                <span class="icon">👹</span>
+                Blender Ogre
+              </div>
+              <div class="project-description">
+                Fantasy character model with detailed sculpting, texturing, and
+                character design elements.
+              </div>
+              <div class="project-tags">
+                <span class="tag">Character Design</span>
+                <span class="tag">Sculpting</span>
+                <span class="tag">Fantasy</span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-title">
+                <span class="icon">🚙</span>
+                Blender Vehicles
+              </div>
+              <div class="project-description">
+                Collection of various vehicle models demonstrating versatility
+                in mechanical object modeling.
+              </div>
+              <div class="project-tags">
+                <span class="tag">Vehicle Collection</span>
+                <span class="tag">Mechanical</span>
+                <span class="tag">Hard Surface</span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-title">
+                <span class="icon">🤖</span>
+                Blender Mecha Robot
+              </div>
+              <div class="project-description">
+                Futuristic mecha robot with complex mechanical details and
+                sci-fi aesthetic design.
+              </div>
+              <div class="project-tags">
+                <span class="tag">Sci-Fi</span>
+                <span class="tag">Mecha Design</span>
+                <span class="tag">Complex Modeling</span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-title">
+                <span class="icon">🗼</span>
+                Blender Light House
+              </div>
+              <div class="project-description">
+                Coastal lighthouse scene with atmospheric lighting and
+                environmental storytelling elements.
+              </div>
+              <div class="project-tags">
+                <span class="tag">Architecture</span>
+                <span class="tag">Lighting</span>
+                <span class="tag">Atmospheric</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-experiences" id="experiences">
+        <div class="experiences-header">
+          <h2 class="heading-secondary">My Journey</h2>
+          <p class="experiences-description">
+            A timeline of my professional experiences, education, and personal
+            growth through diverse opportunities around the world
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline">
+            <!-- Current Unity Internship -->
+            <div class="timeline-item work">
+              <div class="timeline-content">
+                <span class="experience-type">Internship</span>
+                <div class="company-name">EXTRAMUS.EU</div>
+                <div class="position">Unity Game Developer Internship</div>
+                <div class="date-location">
+                  <span class="date">📅 Dec 2024 - Feb 2025</span>
+                  <span class="location"
+                    >📍 Terranova da Sibari, Calabria, Italy</span
+                  >
+                </div>
+                <div class="description">
+                  Creating an interactive game to guide Erasmus students through
+                  internship challenges and opportunities abroad. Working
+                  independently on all aspects of game development.
+                  <ul>
+                    <li>Finding and creating game assets</li>
+                    <li>Developing game logic and mechanics</li>
+                    <li>Level and story design</li>
+                    <li>UI system development</li>
+                  </ul>
+                </div>
+                <div class="skills">
+                  <span class="skill-tag">Unity</span>
+                  <span class="skill-tag">C#</span>
+                  <span class="skill-tag">Game Design</span>
+                  <span class="skill-tag">UI Development</span>
+                  <span class="skill-tag">Asset Creation</span>
+                </div>
+              </div>
+              <div class="timeline-marker"></div>
+            </div>
+
+            <!-- University Graduation -->
+            <div class="timeline-item education">
+              <div class="timeline-content">
+                <span class="experience-type">Graduation</span>
+                <div class="company-name">Sakarya University</div>
+                <div class="position">
+                  Bachelor's Degree in Computer Science
+                </div>
+                <div class="date-location">
+                  <span class="date">📅 Sep 2018 - Feb 2024</span>
+                  <span class="location">📍 Sakarya, Turkey</span>
+                </div>
+                <div class="description">
+                  Completed Bachelor's degree in Computer Science with a GPA of
+                  3.06. Gained comprehensive knowledge in programming, software
+                  engineering, and computer systems. Developed strong analytical
+                  and problem-solving skills.
+                </div>
+                <div class="skills">
+                  <span class="skill-tag">Computer Science</span>
+                  <span class="skill-tag">Programming</span>
+                  <span class="skill-tag">Software Engineering</span>
+                  <span class="skill-tag">Problem Solving</span>
+                  <span class="skill-tag">Academic Excellence</span>
+                </div>
+              </div>
+              <div class="timeline-marker"></div>
+            </div>
+
+            <!-- System Engineer Internship -->
+            <div class="timeline-item work">
+              <div class="timeline-content">
+                <span class="experience-type">Internship</span>
+                <div class="company-name">IBTECH International</div>
+                <div class="position">System Engineer Long-term Intern</div>
+                <div class="date-location">
+                  <span class="date">📅 Sep 2023 - Feb 2024</span>
+                  <span class="location">📍 Kocaeli, Turkey</span>
+                </div>
+                <div class="description">
+                  Gained hands-on experience in server administration and
+                  database management in a professional IT environment.
+                  <ul>
+                    <li>
+                      Daily maintenance of server errors and troubleshooting
+                    </li>
+                    <li>Server and database storage management</li>
+                    <li>Windows server updates and maintenance</li>
+                    <li>Writing automated jobs for servers and databases</li>
+                    <li>
+                      Cross-team collaboration for technical problem-solving
+                    </li>
+                  </ul>
+                </div>
+                <div class="skills">
+                  <span class="skill-tag">Server Administration</span>
+                  <span class="skill-tag">Database Management</span>
+                  <span class="skill-tag">Windows Server</span>
+                  <span class="skill-tag">Troubleshooting</span>
+                  <span class="skill-tag">Team Collaboration</span>
+                </div>
+              </div>
+              <div class="timeline-marker"></div>
+            </div>
+
+            <!-- Work and Travel -->
+            <div class="timeline-item travel">
+              <div class="timeline-content">
+                <span class="experience-type">Cultural Exchange</span>
+                <div class="company-name">Work and Travel USA</div>
+                <div class="position">Cultural Exchange Program</div>
+                <div class="date-location">
+                  <span class="date">📅 Jun 2022 - Oct 2022</span>
+                  <span class="location">📍 United States</span>
+                </div>
+                <div class="description">
+                  Participated in cultural exchange program, working various
+                  jobs while exploring American culture and improving English
+                  language skills. Traveled to multiple cities, gaining
+                  international work experience and cultural awareness.
+                </div>
+                <div class="skills">
+                  <span class="skill-tag">Cultural Adaptability</span>
+                  <span class="skill-tag">English Communication</span>
+                  <span class="skill-tag">Independence</span>
+                  <span class="skill-tag">Work Ethic</span>
+                  <span class="skill-tag">International Experience</span>
+                </div>
+              </div>
+              <div class="timeline-marker"></div>
+            </div>
+
+            <!-- Erasmus Exchange -->
+            <div class="timeline-item education">
+              <div class="timeline-content">
+                <span class="experience-type">Study Abroad</span>
+                <div class="company-name">University of Castilla-La Mancha</div>
+                <div class="position">Erasmus+ Exchange Student</div>
+                <div class="date-location">
+                  <span class="date">📅 Sep 2020 - Jun 2021</span>
+                  <span class="location">📍 Ciudad Real, Spain</span>
+                </div>
+                <div class="description">
+                  Completed one year of Computer Science studies through the
+                  Erasmus+ program, experiencing international education system
+                  and multicultural environment. Enhanced language skills and
+                  gained European academic perspective.
+                </div>
+                <div class="skills">
+                  <span class="skill-tag">International Education</span>
+                  <span class="skill-tag">Spanish Language</span>
+                  <span class="skill-tag">Cultural Intelligence</span>
+                  <span class="skill-tag">Adaptability</span>
+                  <span class="skill-tag">Computer Science</span>
+                </div>
+              </div>
+              <div class="timeline-marker"></div>
+            </div>
+
+            <!-- University Start -->
+            <div class="timeline-item education">
+              <div class="timeline-content">
+                <span class="experience-type">Beginning</span>
+                <div class="company-name">Sakarya University</div>
+                <div class="position">Started Computer Science Journey</div>
+                <div class="date-location">
+                  <span class="date">📅 Sep 2018</span>
+                  <span class="location">📍 Sakarya, Turkey</span>
+                </div>
+                <div class="description">
+                  Began my journey in Computer Science, marking the start of my
+                  professional development in technology and programming. This
+                  was the foundation that led to all my subsequent experiences
+                  and achievements.
+                </div>
+                <div class="skills">
+                  <span class="skill-tag">New Beginning</span>
+                  <span class="skill-tag">Foundation Learning</span>
+                  <span class="skill-tag">Academic Goals</span>
+                  <span class="skill-tag">Growth Mindset</span>
+                </div>
+              </div>
+              <div class="timeline-marker"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-contact-me" id="contact-me">
+        <div class="contact-container">
+          <div class="contact-content">
+            <div class="contact-text">
+              <h2>Let's get in touch</h2>
+              <p>
+                We'd love to hear from you. Send us a message and we'll respond
+                as soon as possible.
+              </p>
+            </div>
+
+            <div class="contact-form">
+              <div class="success-message" id="successMessage">
+                Thank you! Your message has been sent successfully.
+              </div>
+
+              <form id="contactForm">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      required
+                    />
+                    <div class="error-message">
+                      Please enter your first name
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required />
+                    <div class="error-message">Please enter your last name</div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required />
+                  <div class="error-message">
+                    Please enter a valid email address
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Tell us about your project, ideas, or just say hello..."
+                    required
+                  ></textarea>
+                  <div class="error-message">Please enter your message</div>
+                </div>
+
+                <button type="submit" class="btn-submit">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <a class="logo" href="#">Gokay Iseri</a>
+            <p class="footer-tagline">
+              Passionate developer creating digital experiences that make a
+              difference.
+            </p>
+          </div>
+
+          <div class="footer-contact">
+            <h3 class="footer-section-title">Get In Touch</h3>
+
+            <div class="contact-info">
+              <div class="contact-item">
+                <svg class="contact-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                  />
+                </svg>
+                <span>+90 537-509-2804</span>
+              </div>
+
+              <div class="contact-item">
+                <svg class="contact-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                  />
+                </svg>
+                <a href="mailto:gokay.iseri@outlook.com"
+                  >gokay.iseri@outlook.com</a
+                >
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a
+                href="https://github.com/SkyMoonI"
+                target="_blank"
+                class="social-link"
+                aria-label="GitHub"
+              >
+                <svg class="social-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/gökay-işeri-601298215/"
+                target="_blank"
+                class="social-link"
+                aria-label="LinkedIn"
+              >
+                <svg class="social-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="mailto:gokay.iseri@outlook.com"
+                class="social-link"
+                aria-label="Email"
+              >
+                <svg class="social-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">
+            &copy; <span class="year">2025</span> <a href="#">Gokay Iseri</a>.
+            All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

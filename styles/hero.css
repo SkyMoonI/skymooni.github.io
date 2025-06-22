@@ -1,0 +1,47 @@
+/* ***************************** */
+/* HERO SECTION */
+/* ***************************** */
+.section-hero {
+  padding: 1.6rem 0 8rem 0;
+  background-color: #fdf2e9;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.4rem;
+  padding: 0 2.4rem;
+}
+
+.hero-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-description {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 4.4rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.hero-btn-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.hero-img-container {
+  width: 100%;
+}
+
+.hero-img {
+  height: 20rem;
+  width: 100%;
+  background-color: #555;
+  object-fit: cover;
+  object-position: center;
+}
