@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gökay İşeri - Full Stack Developer</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        overflow-x: hidden;
+      }
+
+      /* Header with sticky navigation */
+      header {
+        background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+        color: white;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        background: linear-gradient(45deg, #f39c12, #e74c3c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      nav a::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #f39c12;
+        transition: width 0.3s ease;
+      }
+
+      nav a:hover::after {
+        width: 100%;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 120px 0 80px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.1)"><polygon points="0,0 1000,100 1000,0"/></svg>');
+        background-size: cover;
+      }
+
+      .hero-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: grid;
+        grid-template-columns: 1fr 400px;
+        gap: 4rem;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-text h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .hero-text .subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+        font-weight: 300;
+      }
+
+      .hero-text p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        opacity: 0.8;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .btn-primary {
+        background: linear-gradient(45deg, #f39c12, #e74c3c);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(243, 156, 18, 0.4);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+      }
+
+      .btn-secondary:hover {
+        background: white;
+        color: #667eea;
+      }
+
+      .hero-visual {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .hero-avatar {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 6rem;
+        border: 3px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+      }
+
+      .hero-avatar::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        right: -20px;
+        bottom: -20px;
+        border-radius: 50%;
+        background: linear-gradient(45deg, #f39c12, #e74c3c);
+        z-index: -1;
+        animation: rotate 20s linear infinite;
+        opacity: 0.3;
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Main content layout */
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+      }
+
+      /* About Section */
+      .about {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 4rem;
+        margin-bottom: 4rem;
+      }
+
+      .about-content {
+        background: white;
+        padding: 3rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .about-content h2 {
+        color: #2c3e50;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+      }
+
+      .about-content h2::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(45deg, #f39c12, #e74c3c);
+        border-radius: 2px;
+      }
+
+      .about-content p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        color: #666;
+        text-align: justify;
+      }
+
+      .about-content .highlight {
+        background: linear-gradient(45deg, #f39c12, #e74c3c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 600;
+      }
+
+      /* Skills sidebar */
+      .skills-sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .skills-section {
+        background: white;
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .skills-section h3 {
+        color: #2c3e50;
+        margin-bottom: 1.5rem;
+        font-size: 1.3rem;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1rem;
+      }
+
+      .skill-item {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 1.5rem 1rem;
+        border-radius: 15px;
+        text-align: center;
+        transition: all 0.3s ease;
+        border: 1px solid #e9ecef;
+      }
+
+      .skill-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border-color: #f39c12;
+      }
+
+      .skill-icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .skill-name {
+        font-weight: 600;
+        color: #2c3e50;
+        font-size: 0.9rem;
+      }
+
+      .experience-timeline {
+        list-style: none;
+        position: relative;
+        padding-left: 1.5rem;
+      }
+
+      .experience-timeline::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(45deg, #f39c12, #e74c3c);
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 1.5rem;
+        padding-left: 2rem;
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -1.5rem;
+        top: 0.5rem;
+        width: 12px;
+        height: 12px;
+        background: #f39c12;
+        border-radius: 50%;
+        border: 3px solid white;
+        box-shadow: 0 0 0 3px #f39c12;
+      }
+
+      .timeline-year {
+        color: #f39c12;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      .timeline-title {
+        color: #2c3e50;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .timeline-desc {
+        color: #666;
+        font-size: 0.9rem;
+      }
+
+      /* Projects Section */
+      .projects {
+        margin-top: 4rem;
+      }
+
+      .projects h2 {
+        color: #2c3e50;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        position: relative;
+      }
+
+      .projects h2::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(45deg, #f39c12, #e74c3c);
+        border-radius: 2px;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+      }
+
+      .project-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+      }
+
+      .project-image {
+        height: 200px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 4rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .project-image::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          45deg,
+          transparent 30%,
+          rgba(255, 255, 255, 0.1) 50%,
+          transparent 70%
+        );
+        animation: shimmer 3s infinite;
+      }
+
+      @keyframes shimmer {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+
+      .project-content {
+        padding: 2rem;
+      }
+
+      .project-title {
+        color: #2c3e50;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .project-description {
+        color: #666;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+      }
+
+      .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .tag {
+        background: linear-gradient(45deg, #f39c12, #e74c3c);
+        color: white;
+        padding: 0.3rem 1rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+
+      .project-links {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .project-link {
+        color: #667eea;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .project-link:hover {
+        color: #f39c12;
+      }
+
+      /* Contact Section */
+      .contact {
+        background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+        color: white;
+        padding: 4rem 0;
+        margin-top: 4rem;
+        border-radius: 20px;
+      }
+
+      .contact-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        text-align: center;
+      }
+
+      .contact h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .contact p {
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+        opacity: 0.9;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .contact-item {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .contact-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .contact-info {
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+
+      /* Footer */
+      footer {
+        background: #2c3e50;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .social-link {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+      }
+
+      .social-link:hover {
+        background: linear-gradient(45deg, #f39c12, #e74c3c);
+        transform: translateY(-3px);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .nav-container {
+          flex-direction: column;
+          height: auto;
+          padding: 1rem 2rem;
+        }
+
+        nav ul {
+          margin-top: 1rem;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .hero {
+          padding: 140px 0 60px;
+        }
+
+        .hero-content {
+          grid-template-columns: 1fr;
+          text-align: center;
+          gap: 2rem;
+        }
+
+        .hero-text h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero-avatar {
+          width: 200px;
+          height: 200px;
+          font-size: 4rem;
+        }
+
+        .about {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .about-content,
+        .skills-section {
+          padding: 2rem;
+        }
+
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-content {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .cta-buttons {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="nav-container">
+        <div class="logo">Gökay İşeri</div>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Full Stack Developer</h1>
+          <p class="subtitle">From Game Development to Web Innovation</p>
+          <p>
+            Computer Engineering graduate passionate about creating digital
+            experiences. Specialized in game development with Unity & C#, now
+            expanding into modern web technologies.
+          </p>
+          <div class="cta-buttons">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-avatar">👨‍💻</div>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section class="about" id="about">
+        <div class="about-content">
+          <h2>About Me</h2>
+          <p>
+            Hi! I'm <span class="highlight">Gökay İşeri</span>, a passionate
+            developer with a background in Computer Engineering from Sakarya
+            University. During my university years, I explored various areas of
+            software development, with a strong focus on
+            <span class="highlight">game development</span>, alongside mobile
+            and web development projects.
+          </p>
+
+          <p>
+            I also spent time learning
+            <span class="highlight">3D modeling in Blender</span> to support my
+            game design efforts, combining creativity with technical skills.
+            After graduation, I continued to pursue game development, working on
+            personal projects and deepening my skills in Unity and C#.
+          </p>
+
+          <p>
+            However, challenges in finding industry opportunities led me to
+            shift my focus toward
+            <span class="highlight">software engineering</span>, starting with
+            web development. Currently, I'm expanding my skills further by
+            following Dr. Angela Yu's Web Development Bootcamp, building a solid
+            foundation in full-stack web technologies and modern development
+            practices.
+          </p>
+
+          <p>
+            I enjoy combining creativity with technical skills—whether in games,
+            interactive websites, or software tools—and I'm always looking
+            forward to learning and growing as a developer.
+          </p>
+        </div>
+
+        <div class="skills-sidebar">
+          <div class="skills-section">
+            <h3>Technical Skills</h3>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-icon">🌐</div>
+                <div class="skill-name">HTML</div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">🎨</div>
+                <div class="skill-name">CSS</div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">⚡</div>
+                <div class="skill-name">JavaScript</div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">🎮</div>
+                <div class="skill-name">Unity</div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">💻</div>
+                <div class="skill-name">C#</div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">🏗️</div>
+                <div class="skill-name">OOP</div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">🔧</div>
+                <div class="skill-name">SOLID</div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">🎯</div>
+                <div class="skill-name">Blender</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-section">
+            <h3>Journey</h3>
+            <ul class="experience-timeline">
+              <li class="timeline-item">
+                <div class="timeline-year">2024 - Present</div>
+                <div class="timeline-title">Web Development Bootcamp</div>
+                <div class="timeline-desc">
+                  Following Dr. Angela Yu's comprehensive full-stack web
+                  development course
+                </div>
+              </li>
+              <li class="timeline-item">
+                <div class="timeline-year">2020 - 2024</div>
+                <div class="timeline-title">Game Development Focus</div>
+                <div class="timeline-desc">
+                  Personal projects in Unity, C#, and 3D modeling with Blender
+                </div>
+              </li>
+              <li class="timeline-item">
+                <div class="timeline-year">2016 - 2020</div>
+                <div class="timeline-title">Computer Engineering</div>
+                <div class="timeline-desc">
+                  Graduated from Sakarya University with focus on software
+                  development
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects" id="projects">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-image">🎮</div>
+            <div class="project-content">
+              <h3 class="project-title">Unity Game Projects</h3>
+              <p class="project-description">
+                Collection of game development projects built with Unity engine,
+                featuring custom C# scripts, game mechanics, and interactive
+                gameplay elements.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Unity</span>
+                <span class="tag">C#</span>
+                <span class="tag">Game Design</span>
+                <span class="tag">OOP</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">View Project</a>
+                <a href="#" class="project-link">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image">🌐</div>
+            <div class="project-content">
+              <h3 class="project-title">Web Development Projects</h3>
+              <p class="project-description">
+                Modern web applications and websites built with HTML, CSS, and
+                JavaScript, focusing on responsive design and user experience.
+              </p>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Responsive</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">Live Demo</a>
+                <a href="#" class="project-link">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image">📱</div>
+            <div class="project-content">
+              <h3 class="project-title">Mobile Development</h3>
+              <p class="project-description">
+                Mobile applications developed during university studies,
+                exploring cross-platform development and mobile user interface
+                design.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Mobile</span>
+                <span class="tag">Cross-Platform</span>
+                <span class="tag">UI/UX</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">View Project</a>
+                <a href="#" class="project-link">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image">🎨</div>
+            <div class="project-content">
+              <h3 class="project-title">3D Modeling & Design</h3>
+              <p class="project-description">
+                3D models and assets created in Blender for game development
+                projects, showcasing creative and technical modeling skills.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Blender</span>
+                <span class="tag">3D Modeling</span>
+                <span class="tag">Game Assets</span>
+                <span class="tag">Design</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">View Gallery</a>
+                <a href="#" class="project-link">Download Assets</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <section class="contact" id="contact">
+      <div class="contact-content">
+        <h2>Let's Work Together</h2>
+        <p>
+          I'm always interested in new opportunities and collaborations. Whether
+          you have a project in mind or just want to connect, feel free to reach
+          out!
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-info">gokay.iseri@example.com</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">💼</div>
+            <div class="contact-info">LinkedIn Profile</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🐙</div>
+            <div class="contact-info">GitHub Projects</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div>&copy; 2024 Gökay İşeri. All rights reserved.</div>
+        <div class="social-links">
+          <a href="#" class="social-link">📧</a>
+          <a href="#" class="social-link">💼</a>
+          <a href="#" class="social-link">🐙</a>
+          <a href="#" class="social-link">🎮</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
