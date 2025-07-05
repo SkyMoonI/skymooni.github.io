@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="./styles/general.css" />
     <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/hero.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/about-me.css" />
+    <link rel="stylesheet" href="./styles/skills.css" />
+    <link rel="stylesheet" href="./styles/journey.css" />
+    <link rel="stylesheet" href="./styles/projects.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
   </head>
   <body>
     <header class="header">
@@ -21,28 +27,25 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <section class="section-hero">
-        <div class="content-hero">
-          <h1 class="heading-primary">Full Stack Developer</h1>
-          <span class="hero-subtitle"
-            >From Game Development to Web Innovation</span
-          >
-          <p class="hero-description">
-            Computer Engineering graduate passionate about creating digital
-            experiences. Specialized in game development with Unity & C#, now
-            expanding into modern web technologies.
-          </p>
-          <div class="cta-buttons">
-            <div>
-              <a class="btn btn-primary" href="#projects">View My Work</a>
-            </div>
-            <div>
-              <a class="btn btn-secondary" href="#contact">Get In Touch</a>
-            </div>
+    <section class="section-hero">
+      <div class="content-hero">
+        <h1 class="heading-primary">Full Stack Developer</h1>
+        <span class="hero-subtitle"
+          >From Game Development to Web Innovation</span
+        >
+        <p class="hero-description">
+          Computer Engineering graduate passionate about creating digital
+          experiences. Specialized in game development with Unity & C#, now
+          expanding into modern web technologies.
+        </p>
+        <div class="cta-buttons">
+          <div>
+            <a class="btn btn-primary" href="#projects">View My Work</a>
+          </div>
+          <div>
+            <a class="btn btn-secondary" href="#contact">Get In Touch</a>
           </div>
         </div>
-
         <div class="content-hero-img">
           <img
             src="./images/GokayIseri.jpg"
@@ -50,7 +53,308 @@
             class="hero-img"
           />
         </div>
+      </div>
+    </section>
+    <main class="container-main">
+      <section class="section-about-me card-section">
+        <h2 class="heading-secondary">About Me</h2>
+        <div class="content-about-me">
+          <p>
+            Hi! I'm <span class="highlight">Gökay İşeri</span>, a passionate
+            developer with a background in Computer Engineering from Sakarya
+            University. During my university years, I explored various areas of
+            software development, with a strong focus on
+            <span class="highlight">game development</span>, alongside mobile
+            and web development projects.
+          </p>
+          <p>
+            I also spent time learning
+            <span class="highlight">3D modeling in Blender</span> to support my
+            game design efforts, combining creativity with technical skills.
+            After graduation, I continued to pursue game development, working on
+            personal projects and deepening my skills in Unity and C#.
+          </p>
+          <p>
+            However, challenges in finding industry opportunities led me to
+            shift my focus toward
+            <span class="highlight">software engineering</span>, starting with
+            web development. Currently, I'm expanding my skills further by
+            following Dr. Angela Yu's Web Development Bootcamp, building a solid
+            foundation in full-stack web technologies and modern development
+            practices.
+          </p>
+          <p>
+            I enjoy combining creativity with technical skills—whether in games,
+            interactive websites, or software tools—and I'm always looking
+            forward to learning and growing as a developer.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-skills card-section">
+        <h3 class="heading-tertiary">Technical Skills</h3>
+        <div class="content-skills">
+          <div class="skills">
+            <div class="skills-section">
+              <img src="./images/html-logo.png" alt="" />
+              <p>HTML</p>
+            </div>
+            <div class="skills-section">
+              <img src="./images/css-logo.png" alt="" />
+              <p>CSS</p>
+            </div>
+            <div class="skills-section">
+              <img src="./images/JavaScript-Logo.png" alt="" />
+              <p>JavaScript</p>
+            </div>
+            <div class="skills-section">
+              <img src="./images/unity-logo.png" alt="" />
+              <p>Unity</p>
+            </div>
+            <div class="skills-section">
+              <img src="./images/Csharp-logo.png" alt="" />
+              <p>C#</p>
+            </div>
+            <div class="skills-section">
+              <img src="./images/oop-logo.png" alt="" />
+              <p>Object Oriented Programming</p>
+            </div>
+            <div class="skills-section">
+              <img src="./images/solid-logo.png" alt="" />
+              <p>SOLID Principles</p>
+            </div>
+            <div class="skills-section">
+              <img src="./images/git-logo.png" alt="" />
+              <p>Git</p>
+            </div>
+            <div class="skills-section">
+              <img src="./images/github-logo.png" alt="" />
+              <p>GitHub</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-journey card-section">
+        <h3 class="heading-tertiary">Journey</h3>
+        <ul class="timeline-journey">
+          <li class="timeline-item">
+            <div class="item-tags">
+              <span class="item-tag headline-item-tag">Internship</span>
+            </div>
+            <div class="timeline-year">Dec 2024 - Feb 2025</div>
+            <div class="timeline-title">EXTRAMUS.EU</div>
+            <div class="timeline-title-secondary">
+              Unity Game Developer Internship
+            </div>
+            <div class="timeline-desc">
+              Creating an interactive game to guide Erasmus students through
+              internship challenges and opportunities abroad. Working
+              independently on all aspects of game development.
+              <ul class="timeline-desc-list">
+                <li class="timeline-desc-list-item">
+                  Finding and creating game assets
+                </li>
+                <li class="timeline-desc-list-item">
+                  Developing game logic and mechanics
+                </li>
+                <li class="timeline-desc-list-item">Level and story design</li>
+                <li class="timeline-desc-list-item">UI system development</li>
+              </ul>
+            </div>
+            <div class="item-tags">
+              <span class="item-tag">Unity</span>
+              <span class="item-tag">C#</span>
+              <span class="item-tag">Game Design</span>
+              <span class="item-tag">UI Design</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="item-tags">
+              <span class="item-tag headline-item-tag"
+                >University Education</span
+              >
+            </div>
+            <div class="timeline-year">Sep 2018 - Feb 2024</div>
+            <div class="timeline-title">Sakarya University</div>
+            <div class="timeline-title-secondary">
+              Bachelor's Degree in Computer Science
+            </div>
+            <div class="timeline-desc">
+              Completed Bachelor's degree in Computer Science with a GPA of
+              3.06. Gained comprehensive knowledge in programming, software
+              engineering, and computer systems. Developed strong analytical and
+              problem-solving skills.
+            </div>
+            <div class="item-tags">
+              <span class="item-tag">Computer Science</span>
+              <span class="item-tag">Programming</span>
+              <span class="item-tag">Software Engineering</span>
+              <span class="item-tag">Problem Solving</span>
+              <span class="item-tag">Academic Excellence</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="item-tags">
+              <span class="item-tag headline-item-tag">Internship</span>
+            </div>
+            <div class="timeline-year">Sep 2023 - Feb 2024</div>
+            <div class="timeline-title">IBTECH International</div>
+            <div class="timeline-title-secondary">
+              System Engineer Long-term Internship
+            </div>
+            <div class="timeline-desc">
+              Gained hands-on experience in server administration and database
+              management in a professional IT environment.
+              <ul class="timeline-desc-list">
+                <li class="timeline-desc-list-item">
+                  Daily maintenance of server errors and troubleshooting
+                </li>
+                <li class="timeline-desc-list-item">
+                  Server and database storage management
+                </li>
+                <li class="timeline-desc-list-item">
+                  Windows server updates and maintenance
+                </li>
+                <li class="timeline-desc-list-item">
+                  Writing automated jobs for servers and databases
+                </li>
+                <li class="timeline-desc-list-item">
+                  Cross-team collaboration for technical problem-solving
+                </li>
+              </ul>
+            </div>
+            <div class="item-tags">
+              <span class="item-tag">Server Administration</span>
+              <span class="item-tag">Database Management</span>
+              <span class="item-tag">Windows Server</span>
+              <span class="item-tag">Troubleshooting</span>
+              <span class="item-tag">Team Collaboration</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="item-tags">
+              <span class="item-tag headline-item-tag">Cultural Exchange</span>
+            </div>
+            <div class="timeline-year">Jun 2022 - Oct 2022</div>
+            <div class="timeline-title">Work and Travel USA</div>
+            <div class="timeline-title-secondary">
+              Cultural Exchange Program
+            </div>
+            <div class="timeline-desc">
+              Participated in cultural exchange program, working various jobs
+              while exploring American culture and improving English language
+              skills. Traveled to multiple cities, gaining international work
+              experience and cultural awareness.
+            </div>
+            <div class="item-tags">
+              <span class="item-tag">Cultural Adaptability</span>
+              <span class="item-tag">English Communication</span>
+              <span class="item-tag">Independence</span>
+              <span class="item-tag">Work Ethic</span>
+              <span class="item-tag">International Experience</span>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="item-tags">
+              <span class="item-tag headline-item-tag">Study Abroad</span>
+            </div>
+            <div class="timeline-year">Sep 2020 - Jun 2021</div>
+            <div class="timeline-title">University of Castilla-La Mancha</div>
+            <div class="timeline-title-secondary">
+              Erasmus+ Exchange Student
+            </div>
+            <div class="timeline-desc">
+              Completed one year of Computer Science studies through the
+              Erasmus+ program, experiencing international education system and
+              multicultural environment. Enhanced language skills and gained
+              European academic perspective.
+            </div>
+            <div class="item-tags">
+              <span class="item-tag">International Education</span>
+              <span class="item-tag">Spanish Language</span>
+              <span class="item-tag">Cultural Intelligence</span>
+              <span class="item-tag">Adaptability</span>
+              <span class="item-tag">Computer Science</span>
+            </div>
+          </li>
+        </ul>
       </section>
     </main>
+    <section class="section-contact">
+      <h2>Let's Work Together</h2>
+      <p>
+        I'm always interested in new opportunities and collaborations. Whether
+        you have a project in mind or just want to connect, feel free to reach
+        out!
+      </p>
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="content-footer">
+        <div class="footer-logo-section">
+          <span class="footer-logo">Gokay Iseri</span>
+          <p class="footer-desc">
+            Passionate developer creating digital experiences that make a
+            difference.
+          </p>
+        </div>
+        <div class="contact-info">
+          <span class="contact-title">Get In Touch</span>
+          <div class="contact-number">
+            <ion-icon name="call-outline"></ion-icon
+            ><a class="contact-number" href="tel:+90 537-509-2804"
+              >+90 537-509-2804</a
+            >
+          </div>
+          <div class="contact-number">
+            <ion-icon name="call-outline"></ion-icon
+            ><a class="contact-number" href="tel:+81 070-9038-5733"
+              >+81 070-9038-5733</a
+            >
+          </div>
+          <div class="contact-email">
+            <ion-icon name="mail-outline"></ion-icon
+            ><span>gokay.iseri@outlook.com</span>
+          </div>
+        </div>
+        <div class="social-links">
+          <a
+            class="social-link"
+            href="https://github.com/SkyMoonI"
+            target="_blank"
+            ><ion-icon name="logo-github"></ion-icon
+          ></a>
+          <a
+            class="social-link"
+            href="https://www.linkedin.com/in/gökay-işeri-601298215/"
+            target="_blank"
+            ><ion-icon name="logo-linkedin"></ion-icon
+          ></a>
+          <a class="social-link" href="mailto:gokay.iseri@outlook.com"
+            ><ion-icon name="mail-outline"></ion-icon
+          ></a>
+        </div>
+        <div class="divider"></div>
+        <p class="copyright">
+          &copy; <span class="year">2025</span>
+          <span class="highlight">Gokay Iseri</span>. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>

@@ -1,0 +1,107 @@
+.footer {
+  padding: 3.2rem 0;
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+.content-footer {
+  padding: 0 3.2rem;
+}
+
+.footer-logo-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  align-items: center;
+  text-align: center;
+  margin-bottom: 4.2rem;
+}
+
+.footer-logo {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.footer-desc {
+  font-size: 1.4rem;
+  opacity: 0.8;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 4.2rem;
+
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.contact-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.contact-number,
+.contact-email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+
+  opacity: 0.8;
+}
+
+.contact-number ion-icon,
+.contact-email ion-icon {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+.contact-number:link,
+.contact-number:visited,
+.contact-email:link,
+.contact-email:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.social-links ion-icon {
+  height: 2rem;
+  width: 2rem;
+  color: #fff;
+}
+
+.social-link:link,
+.social-link:visited {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 5.2rem;
+  height: 5.2rem;
+  border-radius: 50%;
+  font-size: 1.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.social-link:hover,
+.social-link:active {
+  background: linear-gradient(45deg, #f39c12, #e74c3c);
+  transform: translateY(-2px);
+}
+
+.copyright {
+  opacity: 0.8;
+  color: #fff;
+  text-align: center;
+}

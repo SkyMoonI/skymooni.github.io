@@ -1,0 +1,28 @@
+.skills {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+
+  padding: 2.4rem 1.6rem;
+  border-radius: 0.8rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+.skills-section img {
+  height: 5.2rem;
+}
+
+.skills-section p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+}

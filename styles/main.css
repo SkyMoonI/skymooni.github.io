@@ -1,0 +1,8 @@
+.container-main {
+  padding: 6.4rem 3.2rem;
+  color: #333;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.2rem;
+}

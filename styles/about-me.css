@@ -1,0 +1,11 @@
+.content-about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+
+  line-height: 1.6;
+  font-size: 1.8rem;
+  color: #666;
+  text-align: justify;
+}
