@@ -1,5 +1,5 @@
 .footer {
-  padding: 3.2rem 0;
+  padding: 6.4rem 0 3.2rem 0;
   background-color: #2c3e50;
   color: #fff;
 }
@@ -29,7 +29,7 @@
   opacity: 0.8;
 }
 
-.contact-info {
+.footer-contact-info {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
@@ -39,13 +39,13 @@
   font-size: 1.2rem;
 }
 
-.contact-title {
+.footer-contact-title {
   font-size: 1.6rem;
   font-weight: 600;
 }
 
-.contact-number,
-.contact-email {
+.footer-contact-number,
+.footer-contact-email {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,16 +54,16 @@
   opacity: 0.8;
 }
 
-.contact-number ion-icon,
-.contact-email ion-icon {
+.footer-contact-number ion-icon,
+.footer-contact-email ion-icon {
   height: 1.6rem;
   width: 1.6rem;
 }
 
-.contact-number:link,
-.contact-number:visited,
-.contact-email:link,
-.contact-email:visited {
+.footer-contact-number:link,
+.footer-contact-number:visited,
+.footer-contact-email:link,
+.footer-contact-email:visited {
   color: #fff;
   text-decoration: none;
 }

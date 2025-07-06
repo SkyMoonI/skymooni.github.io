@@ -1,3 +1,7 @@
+.section-skills {
+  margin: 0 3.2rem;
+}
+
 .skills {
   display: grid;
   grid-template-columns: 1fr;

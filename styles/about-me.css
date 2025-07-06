@@ -1,3 +1,7 @@
+.section-about-me {
+  margin: 0 3.2rem;
+}
+
 .content-about-me {
   display: flex;
   flex-direction: column;

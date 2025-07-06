@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./styles/skills.css" />
     <link rel="stylesheet" href="./styles/journey.css" />
     <link rel="stylesheet" href="./styles/projects.css" />
+    <link rel="stylesheet" href="./styles/contact.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
   </head>
   <body>
@@ -20,14 +21,14 @@
       <h1 class="header-logo">Gokay Iseri</h1>
       <nav class="header-nav">
         <ul class="header-nav-list">
-          <li class="header-nav-item"><a href="#">Home</a></li>
-          <li class="header-nav-item"><a href="#">About</a></li>
-          <li class="header-nav-item"><a href="#">Projects</a></li>
-          <li class="header-nav-item"><a href="#">Contact</a></li>
+          <li class="header-nav-item"><a href="#home">Home</a></li>
+          <li class="header-nav-item"><a href="#about">About</a></li>
+          <li class="header-nav-item"><a href="#projects">Projects</a></li>
+          <li class="header-nav-item"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <section class="section-hero">
+    <section class="section-hero" id="home">
       <div class="content-hero">
         <h1 class="heading-primary">Full Stack Developer</h1>
         <span class="hero-subtitle"
@@ -56,7 +57,7 @@
       </div>
     </section>
     <main class="container-main">
-      <section class="section-about-me card-section">
+      <section class="section-about-me card-section" id="about">
         <h2 class="heading-secondary">About Me</h2>
         <div class="content-about-me">
           <p>
@@ -91,7 +92,7 @@
         </div>
       </section>
 
-      <section class="section-skills card-section">
+      <section class="section-skills card-section" id="skills">
         <h3 class="heading-tertiary">Technical Skills</h3>
         <div class="content-skills">
           <div class="skills">
@@ -135,7 +136,7 @@
         </div>
       </section>
 
-      <section class="section-journey card-section">
+      <section class="section-journey card-section" id="journey">
         <h3 class="heading-tertiary">Journey</h3>
         <ul class="timeline-journey">
           <li class="timeline-item">
@@ -280,18 +281,420 @@
           </li>
         </ul>
       </section>
+
+      <div class="divider"></div>
+
+      <section class="section-projects" id="projects">
+        <div class="container-projects">
+          <div class="projects-header">
+            <h2 class="heading-secondary">Featured Projects</h2>
+            <p class="portfolio-description">
+              Explore some of my work across web development, game development,
+              and 3D modeling
+            </p>
+          </div>
+          <div class="projects-tab-grid">
+            <button class="tab-button active" onclick="showTab('web')">
+              <span class="icon">🌐</span><span>Web Projects</span>
+            </button>
+            <button class="tab-button" onclick="showTab('game')">
+              <span class="icon">🎮</span><span>Game Projects</span>
+            </button>
+            <button class="tab-button" onclick="showTab('blender')">
+              <span class="icon">🎨</span><span>Blender Projects</span>
+            </button>
+          </div>
+          <div class="projects-grid projects-web active" id="web">
+            <h4 class="heading-quaternary">Web Development Projects</h4>
+            <div class="projects-grid-items">
+              <div class="projects-grid-item card-section">
+                <div class="projects-grid-item-image">
+                  <img
+                    src="./images/projects/web/new-website-cover.png"
+                    alt=""
+                  />
+                </div>
+                <div class="projects-grid-item-info">
+                  <p class="projects-grid-item-title">New Website Project</p>
+                  <p class="projects-grid-item-desc">
+                    Latest web development project showcasing modern design
+                    principles and cutting-edge technologies.
+                  </p>
+                </div>
+                <div class="item-tags">
+                  <span class="item-tag">HTML5</span>
+                  <span class="item-tag">CSS3</span>
+                  <span class="item-tag">JavaScript</span>
+                  <span class="item-tag">Responsive</span>
+                </div>
+              </div>
+              <div class="projects-grid-item card-section">
+                <div class="projects-grid-item-image">
+                  <img src="./images/projects/web/omnifood-cover.png" alt="" />
+                </div>
+                <div class="projects-grid-item-info">
+                  <p class="projects-grid-item-title">Omnifood Project</p>
+                  <p class="projects-grid-item-desc">
+                    Food delivery website featuring elegant design, smooth
+                    animations, and user-friendly interface for easy ordering.
+                    Created by following a course on Udemy.
+                  </p>
+                </div>
+                <div class="item-tags">
+                  <span class="item-tag">Landing Page</span>
+                  <span class="item-tag">CSS Grid</span>
+                  <span class="item-tag">Flexbox</span>
+                  <span class="item-tag">Animations</span>
+                </div>
+              </div>
+              <div class="projects-grid-item card-section">
+                <div class="projects-grid-item-image">
+                  <img
+                    src="./images/projects/web/old-website-cover.png"
+                    alt=""
+                  />
+                </div>
+                <div class="projects-grid-item-info">
+                  <p class="projects-grid-item-title">Old Website Project</p>
+                  <p class="projects-grid-item-desc">
+                    Earlier web development work demonstrating growth and
+                    evolution in coding skills and design approach.
+                  </p>
+                </div>
+                <div class="item-tags">
+                  <span class="item-tag">HTML</span>
+                  <span class="item-tag">CSS</span>
+                  <span class="item-tag">Foundation</span>
+                  <span class="item-tag">Learning</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="projects-grid projects-game" id="game">
+            <h4 class="heading-quaternary">Game Development Projects</h4>
+            <div class="projects-grid-items">
+              <div class="projects-grid-item card-section">
+                <div class="projects-grid-item-image">
+                  <img
+                    src="./images/projects/game/kawaii-survivor-cover.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="projects-grid-item-info">
+                  <p class="projects-grid-item-title">Kawaii Survivor</p>
+                  <p class="projects-grid-item-desc">
+                    Cute survival game developed following a comprehensive game
+                    development course.
+                  </p>
+                </div>
+                <div class="item-tags">
+                  <span class="item-tag">Survival</span>
+                  <span class="item-tag">Course Project</span>
+                  <span class="item-tag">Rogue-like</span>
+                </div>
+              </div>
+              <div class="projects-grid-item card-section">
+                <div class="projects-grid-item-image">
+                  <img
+                    src="./images/projects/game/TileVania_Cover.png"
+                    alt=""
+                  />
+                </div>
+                <div class="projects-grid-item-info">
+                  <p class="projects-grid-item-title">Tile Vania</p>
+                  <p class="projects-grid-item-desc">
+                    2D platformer game with tile-based level design and classic
+                    gameplay mechanics.
+                  </p>
+                </div>
+                <div class="item-tags">
+                  <span class="item-tag">Unity</span>
+                  <span class="item-tag">2D Platformer</span>
+                  <span class="item-tag">C# </span>
+                </div>
+              </div>
+              <div class="projects-grid-item card-section">
+                <div class="projects-grid-item-image">
+                  <img
+                    src="./images/projects/game/endless-war-cover.png"
+                    alt=""
+                  />
+                </div>
+                <div class="projects-grid-item-info">
+                  <p class="projects-grid-item-title">Endless War</p>
+                  <p class="projects-grid-item-desc">
+                    Mobile RPG game where players control a character to battle
+                    skeletons, gain experience, and upgrade stats. Original
+                    creation.
+                  </p>
+                </div>
+                <div class="item-tags">
+                  <span class="item-tag">Mobile Game</span>
+                  <span class="item-tag">RPG</span>
+                  <span class="item-tag">Character Progression</span>
+                  <span class="item-tag">Original</span>
+                </div>
+              </div>
+              <div class="projects-grid-item card-section">
+                <div class="projects-grid-item-image">
+                  <img src="./images/projects/game/TankGame_Cover.png" alt="" />
+                </div>
+                <div class="projects-grid-item-info">
+                  <p class="projects-grid-item-title">Tank Game</p>
+                  <p class="projects-grid-item-desc">
+                    Mobile RPG/Endless Runner game where players control a tank
+                    to battle zombies, gain experience, and upgrade stats.
+                    Original creation.
+                  </p>
+                </div>
+                <div class="item-tags">
+                  <span class="item-tag">Mobile Game</span>
+                  <span class="item-tag">RPG</span>
+                  <span class="item-tag">Character Progression</span>
+                  <span class="item-tag">Original</span>
+                </div>
+              </div>
+              <div class="projects-grid-item card-section">
+                <div class="projects-grid-item-image">
+                  <img src="./images/projects/game/HeatRush_Cover.png" alt="" />
+                </div>
+                <div class="projects-grid-item-info">
+                  <p class="projects-grid-item-title">Heat Rush</p>
+                  <p class="projects-grid-item-desc">
+                    Fast-paced game created during a game jam, showcasing
+                    ability to work under pressure and tight deadlines.
+                  </p>
+                </div>
+                <div class="item-tags">
+                  <span class="item-tag">Game Jam</span>
+                  <span class="item-tag">Time Pressure</span>
+                  <span class="item-tag">Fast Development</span>
+                  <span class="item-tag">Original</span>
+                </div>
+              </div>
+              <div class="projects-grid-item card-section">
+                <div class="projects-grid-item-image">
+                  <img
+                    src="./images/projects/game/FlappyBird_Cover.png"
+                    alt=""
+                  />
+                </div>
+                <div class="projects-grid-item-info">
+                  <p class="projects-grid-item-title">Flappy Bird</p>
+                  <p class="projects-grid-item-desc">
+                    Recreation of the classic Flappy Bird game, demonstrating
+                    understanding of game physics and mechanics.
+                  </p>
+                </div>
+                <div class="item-tags">
+                  <span class="item-tag">Classic Recreation</span>
+                  <span class="item-tag">Physics</span>
+                  <span class="item-tag">Game Fundamentals</span>
+                </div>
+              </div>
+              <div class="projects-grid-item card-section">
+                <div class="projects-grid-item-image">
+                  <img
+                    src="./images/projects/game/QuizMaster_Cover.png"
+                    alt=""
+                  />
+                </div>
+                <div class="projects-grid-item-info">
+                  <p class="projects-grid-item-title">Quiz Master</p>
+                  <p class="projects-grid-item-desc">
+                    Interactive quiz application with engaging user interface
+                    and educational gameplay elements.
+                  </p>
+                </div>
+                <div class="item-tags">
+                  <span class="item-tag">Interactive</span>
+                  <span class="item-tag">Educational</span>
+                  <span class="item-tag">UI/UX</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="projects-grid projects-blender" id="blender">
+            <h4 class="heading-quaternary">3D Modeling & Animation Projects</h4>
+            <div class="projects-grid-items">
+              <div class="projects-grid-item card-section">
+                <div class="projects-grid-item-image">
+                  <img src="./images/projects/blender/Plane_Cover.png" alt="" />
+                </div>
+                <div class="projects-grid-item-info">
+                  <p class="projects-grid-item-title">Blender Plane</p>
+                  <p class="projects-grid-item-desc">
+                    3D aircraft model showcasing modeling techniques, texture,
+                    environment and attention to video creation and animation.
+                  </p>
+                </div>
+                <div class="item-tags">
+                  <span class="item-tag">3D Modeling</span>
+                  <span class="item-tag">Vehicle</span>
+                  <span class="item-tag">Technical</span>
+                  <span class="item-tag">Animation</span>
+                  <span class="item-tag">Camera</span>
+                </div>
+              </div>
+              <div class="projects-grid-item card-section">
+                <div class="projects-grid-item-image">
+                  <img src="./images/projects/blender/Donut_Cover.png" alt="" />
+                </div>
+                <div class="projects-grid-item-info">
+                  <p class="projects-grid-item-title">Blender Donut</p>
+                  <p class="projects-grid-item-desc">
+                    Classic beginner project featuring realistic donut with
+                    icing, demonstrating fundamental Blender skills.
+                  </p>
+                </div>
+                <div class="item-tags">
+                  <span class="item-tag">Beginner Project</span>
+                  <span class="item-tag">Texturing</span>
+                  <span class="item-tag">Materials</span>
+                  <span class="item-tag">Animations</span>
+                </div>
+              </div>
+              <div class="projects-grid-item card-section">
+                <div class="projects-grid-item-image">
+                  <img
+                    src="./images/projects/blender/Village_Cover.png"
+                    alt=""
+                  />
+                </div>
+                <div class="projects-grid-item-info">
+                  <p class="projects-grid-item-title">Blender Village</p>
+                  <p class="projects-grid-item-desc">
+                    Complete village scene with multiple buildings, landscaping,
+                    and environmental storytelling.
+                  </p>
+                </div>
+                <div class="item-tags">
+                  <span class="item-tag">Environment</span>
+                  <span class="item-tag">Scene Composition</span>
+                  <span class="item-tag">Landscape</span>
+                  <span class="item-tag">Learning</span>
+                </div>
+              </div>
+              <div class="projects-grid-item card-section">
+                <div class="projects-grid-item-image">
+                  <img src="./images/projects/blender/Ogre_Cover2.png" alt="" />
+                </div>
+                <div class="projects-grid-item-info">
+                  <p class="projects-grid-item-title">Blender Ogre</p>
+                  <p class="projects-grid-item-desc">
+                    Fantasy character model with detailed sculpting, texturing,
+                    and character design elements.
+                  </p>
+                </div>
+                <div class="item-tags">
+                  <span class="item-tag">Character Design</span>
+                  <span class="item-tag">Sculpting</span>
+                  <span class="item-tag">Fantasy</span>
+                </div>
+              </div>
+              <div class="projects-grid-item card-section">
+                <div class="projects-grid-item-image">
+                  <img
+                    src="./images/projects/blender/Vehicles_Cover.png"
+                    alt=""
+                  />
+                </div>
+                <div class="projects-grid-item-info">
+                  <p class="projects-grid-item-title">Blender Vehicles</p>
+                  <p class="projects-grid-item-desc">
+                    Collection of various vehicle models demonstrating
+                    versatility in mechanical object modeling.
+                  </p>
+                </div>
+                <div class="item-tags">
+                  <span class="item-tag">Vehicle Collection</span>
+                  <span class="item-tag">Mechanical</span>
+                  <span class="item-tag">Hard Surface</span>
+                </div>
+              </div>
+              <div class="projects-grid-item card-section">
+                <div class="projects-grid-item-image">
+                  <img
+                    src="./images/projects/blender/MechaRobot_Cover.png"
+                    alt=""
+                  />
+                </div>
+                <div class="projects-grid-item-info">
+                  <p class="projects-grid-item-title">Blender Mecha Robot</p>
+                  <p class="projects-grid-item-desc">
+                    Futuristic mecha robot with complex mechanical details and
+                    sci-fi aesthetic design.
+                  </p>
+                </div>
+                <div class="item-tags">
+                  <span class="item-tag">Sci-Fi</span>
+                  <span class="item-tag">Mecha Design</span>
+                  <span class="item-tag">Complex Modeling</span>
+                </div>
+              </div>
+              <div class="projects-grid-item card-section">
+                <div class="projects-grid-item-image">
+                  <img
+                    src="./images/projects/blender/Lighthouse_Cover.png"
+                    alt=""
+                  />
+                </div>
+                <div class="projects-grid-item-info">
+                  <p class="projects-grid-item-title">
+                    Blender Light House Robot
+                  </p>
+                  <p class="projects-grid-item-desc">
+                    Coastal lighthouse scene with atmospheric lighting and
+                    environmental storytelling elements.
+                  </p>
+                </div>
+                <div class="item-tags">
+                  <span class="item-tag">Architecture</span>
+                  <span class="item-tag">Lighting</span>
+                  <span class="item-tag">Atmospheric</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <section class="section-contact">
-      <h2>Let's Work Together</h2>
-      <p>
-        I'm always interested in new opportunities and collaborations. Whether
-        you have a project in mind or just want to connect, feel free to reach
-        out!
-      </p>
-      <div>
-        <div></div>
-        <div></div>
-        <div></div>
+    <section class="section-contact" id="contact">
+      <div class="contact-container">
+        <div class="contact-info">
+          <h2 class="heading-secondary">Let's Work Together</h2>
+          <p class="contact-info-desc">
+            I'm always interested in new opportunities and collaborations.
+            Whether you have a project in mind or just want to connect, feel
+            free to reach out!
+          </p>
+        </div>
+        <div class="contact-form">
+          <div class="form-group">
+            <label for="first-name">First Name</label
+            ><input type="text" id="first-name" name="first-name" required />
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label
+            ><input type="text" id="last-name" name="last-name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label
+            ><input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label
+            ><textarea
+              id="message"
+              name="message"
+              placeholder="Tell us about your project, ideas, or just say hello..."
+              required
+            ></textarea>
+          </div>
+          <div>
+            <button type="submit" class="btn-submit">Send Message</button>
+          </div>
+        </div>
       </div>
     </section>
     <footer class="footer">
@@ -303,21 +706,21 @@
             difference.
           </p>
         </div>
-        <div class="contact-info">
-          <span class="contact-title">Get In Touch</span>
-          <div class="contact-number">
+        <div class="footer-contact-info">
+          <span class="footer-contact-title">Get In Touch</span>
+          <div class="footer-contact-number">
             <ion-icon name="call-outline"></ion-icon
-            ><a class="contact-number" href="tel:+90 537-509-2804"
+            ><a class="footer-contact-number" href="tel:+90 537-509-2804"
               >+90 537-509-2804</a
             >
           </div>
-          <div class="contact-number">
+          <div class="footer-contact-number">
             <ion-icon name="call-outline"></ion-icon
-            ><a class="contact-number" href="tel:+81 070-9038-5733"
+            ><a class="footer-contact-number" href="tel:+81 070-9038-5733"
               >+81 070-9038-5733</a
             >
           </div>
-          <div class="contact-email">
+          <div class="footer-contact-email">
             <ion-icon name="mail-outline"></ion-icon
             ><span>gokay.iseri@outlook.com</span>
           </div>
@@ -347,6 +750,7 @@
       </div>
     </footer>
 
+    <script src="./scripts/script.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -355,6 +759,5 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <script src="./scripts/script.js"></script>
   </body>
 </html>

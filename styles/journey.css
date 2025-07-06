@@ -1,3 +1,7 @@
+.section-journey {
+  margin: 0 3.2rem;
+}
+
 .timeline-journey {
   display: flex;
   flex-direction: column;
