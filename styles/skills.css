@@ -4,7 +4,7 @@
 
 .skills {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   gap: 1.5rem;
   justify-items: center;
 }
@@ -18,9 +18,19 @@
   width: 100%;
 
   padding: 2.4rem 1.6rem;
-  border-radius: 0.8rem;
+  border: 1px solid #e9ecef;
+  border-radius: 15px;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+
+  transition: all 0.3s ease;
 }
+
+.skills-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f39c12;
+}
+
 .skills-section img {
   height: 5.2rem;
 }

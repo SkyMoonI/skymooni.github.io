@@ -72,6 +72,8 @@ html {
   font-size: 62.5%;
 
   scroll-behavior: smooth;
+
+  scroll-padding-top: 12rem;
 }
 
 body {
@@ -134,17 +136,31 @@ body {
   color: #fff;
 }
 
-.btn-primary,
 .btn-primary:link,
 .btn-primary:visited {
   background: linear-gradient(45deg, #f39c12, #e74c3c);
+
+  transition: all 0.3s;
 }
 
-.btn-secondary,
+.btn-primary:hover,
+.btn-primary:active {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(243, 156, 18, 0.4);
+}
+
 .btn-secondary:link,
 .btn-secondary:visited {
   background-color: transparent;
   border: 2px solid #fff;
+
+  transition: all 0.3s;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+  background-color: #fff;
+  color: #667eea;
 }
 
 .highlight {

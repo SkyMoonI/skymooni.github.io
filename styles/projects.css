@@ -20,22 +20,13 @@
 }
 
 .projects-tab-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
   gap: 0.8rem;
   padding: 0 3.2rem;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-}
-.tab-button:first-child {
-  grid-column: span 2;
-}
-
-.tab-button:nth-child(2) {
-  grid-column: span 2;
-}
-
-.tab-button:last-child {
-  grid-column: 2 / span 2;
 }
 
 .tab-button {
@@ -53,6 +44,11 @@
 
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .tab-button.active {
@@ -113,6 +109,13 @@
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+
+  transition: all 0.3s ease;
+}
+
+.projects-grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .projects-grid-item-image {
@@ -120,6 +123,8 @@
   height: 20rem;
   border-radius: 1rem;
   overflow: hidden;
+
+  cursor: pointer;
 
   background-color: #555;
 }
